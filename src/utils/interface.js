@@ -9,7 +9,18 @@ router.get('/system', (req, res) => {
         res.render('CompanyRegister', sess);
     }
     else {
-        sess.message ='Debe iniciar sesión primero.';
+        sess.message ='User not logged in, please authenticate.';
+        res.redirect('/')
+    }
+})
+router.get('/system/registerCompany', (req, res) => {
+    sess = req.session;
+    if(sess.email) {
+        
+
+    }
+    else {
+        sess.message ='User not logged in, please authenticate.';
         res.redirect('/')
     }
 })

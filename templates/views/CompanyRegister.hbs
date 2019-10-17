@@ -26,12 +26,7 @@
             <ul class="right hide-on-med-and-down">
               <li>
                 <a href="javascript:void(0);" class="waves-effect waves-block waves-light translation-button" data-activates="translation-dropdown">
-                  <span class="flag-icon flag-icon-gb"></span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen">
-                  <i class="material-icons">settings_overscan</i>
+                  <span class="flag-icon flag-icon-us"></span>
                 </a>
               </li>
               <li>
@@ -50,28 +45,20 @@
                 </a>
               </li>
               <li>
-                <a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse">
-                  <i class="material-icons">format_indent_increase</i>
-                </a>
+                <a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen">
+                  <i class="material-icons">settings_overscan</i>
+                </a>              
               </li>
             </ul>
             <!-- translation-button -->
             <ul id="translation-dropdown" class="dropdown-content">
               <li>
                 <a href="#!" class="grey-text text-darken-1">
-                  <i class="flag-icon flag-icon-gb"></i> English</a>
+                  <i class="flag-icon flag-icon-us"></i> English</a>
               </li>
               <li>
                 <a href="#!" class="grey-text text-darken-1">
-                  <i class="flag-icon flag-icon-fr"></i> French</a>
-              </li>
-              <li>
-                <a href="#!" class="grey-text text-darken-1">
-                  <i class="flag-icon flag-icon-cn"></i> Chinese</a>
-              </li>
-              <li>
-                <a href="#!" class="grey-text text-darken-1">
-                  <i class="flag-icon flag-icon-de"></i> German</a>
+                  <i class="flag-icon flag-icon-es"></i> Spanish</a>
               </li>
             </ul>
             <!-- notifications-dropdown -->
@@ -123,10 +110,6 @@
                   <i class="material-icons">live_help</i> Help</a>
               </li>
               <li class="divider"></li>
-              <li>
-                <a href="#" class="grey-text text-darken-1">
-                  <i class="material-icons">lock_outline</i> Lock</a>
-              </li>
               <li>
                 <a href="/logout" class="grey-text text-darken-1">
                   <i class="material-icons">keyboard_tab</i> Logout</a>
@@ -181,9 +164,6 @@
               </ul>
             </li>
           </ul>
-          <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only">
-            <i class="material-icons">menu</i>
-          </a>
         </aside>
         <!-- END LEFT SIDEBAR NAV-->
         <!-- //////////////////////////////////////////////////////////////////////////// -->
@@ -239,15 +219,18 @@
                     <div class="card-panel">
                       <h4 class="header2"></h4>
                       <div class="row">
-                        <form class="col s12">
+                        <form class="col s11 m11 l11">
                           <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s12 m8 l9">
                               <input id="name" type="text">
                               <label for="first_name">Company Name *</label>
                             </div>
+                            <div class="col s12 m4 l3">
+                              <div class="dropify-wrapper"><div class="dropify-message"></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" id="input-file-now" class="dropify" data-default-file=""><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p></div></div></div></div>                            
+                            </div>
                           </div>
                           <div class="row">
-                                <div class="input-field col s12">
+                                <div class="input-field col s12 m12 l12">
                                   <input id="email" type="email">
                                   <label for="email">Company Email</label>
                                 </div>

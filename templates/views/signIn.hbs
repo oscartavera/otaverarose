@@ -7,9 +7,9 @@
             <div class="col s12 m6 l4 z-depth-4 card-panel border-radius-6 login-card bg-opacity-8">
                 <div style="margin: 0 auto;"><img src="./img/logo/Rose-logo.png"></div>
               <div class="row">
-                <form class="login-form" method="POST" action="/login">
+                <form class="login-form" method="POST" autocomplete="off" action="/login">
                   <div class="input-field col s12">
-                    <h7 class="ml-4">{{#if message includeZero=true}}{{message}}{{else}}Sign in{{/if}}</h7>
+                    <h7 class="ml-4" id="message_log">{{#if message includeZero=true}}{{message}}{{else}}Sign in{{/if}}</h7>
                   </div>
                 </div>
                 <div class="row margin">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <button type="submit" class="btn waves-effect waves-light mdc-button__ripple mdl-color--pink-300 col s12">Login</button>
+                    <button id="loginUser" type="submit" class="btn waves-effect waves-light mdc-button__ripple mdl-color--pink-300 col s12">Login</button>
                   </div>
                 </div>
                 <div class="row">
@@ -60,13 +60,12 @@
         </div>
       </div>
     </div>
-<!-- ================================================
-    Scripts
-    ================================================ -->
-    <!-- BEGIN VENDOR JS
-    <script src="vendors/vendors.min.js" type="text/javascript"></script>-->
-    <!-- BEGIN VENDOR JS-->
-    <!-- jQuery Library -->
+    <script type="text/javascript">
+    //<![CDATA[
+    var campo= document.getElementById("username")
+    campo.setAttribute("autocomplete", "off");
+    //]]>
+  </script>
     <script type="text/javascript" src="vendors/jquery-3.2.1.min.js"></script>
     <!--materialize js-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -76,5 +75,6 @@
     <script type="text/javascript" src="js/plugins.js"></script>
     <!--custom-script.js - Add your own theme custom JS-->
     <script type="text/javascript" src="js/custom-script.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
