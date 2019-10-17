@@ -19,11 +19,7 @@ const partialsPath = path.join(__dirname, '../templates/partials')
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
-<<<<<<< HEAD
 app.use(bodyParser.json())
-=======
-app.use(bodyParser.urlencoded({ extended: false }))
->>>>>>> origin
 app.use(cookieParser());
 app.use(session({secret:"rose", cookie:{maxAge:2000}}));
 // Setup static directory to serve
@@ -35,7 +31,6 @@ app.post('/login', function (req, res) {
     let {body} = req
     sess = req.session;
     Login(body).then(function(result){
-<<<<<<< HEAD
         r = result.data;
         sess.token = r.Token 
         sess.user  = r.Name
@@ -54,26 +49,11 @@ app.post('/login', function (req, res) {
             sess.message = 'Cannot login.'; 
             res.send(r);
         }
-=======
-        sess.token = result.Token 
-        sess.user  = result.Name
-        sess.email = result.Email
-        res.redirect('/system');
-    }).catch(function(error){
-        if(error.response.status==422){
-            e = error.response.data.errors;
-            sess.message = e[0].msg; 
-        }else{
-            sess.message = 'Cannot login.'; 
-        }
-        return res.redirect('/')
->>>>>>> origin
     });
         /*res.cookie('sessionToken', user.token, { expire: 1500 + Date.now()});
         res.cookie('userData', user.user, { expire: 1500 + Date.now()});*/     
 })
 
-<<<<<<< HEAD
 app.post('/signUp', function (req, res) { 
     let {body} = req
     sess = req.session;
@@ -99,8 +79,6 @@ app.post('/signUp', function (req, res) {
     });
 })
 
-=======
->>>>>>> origin
 app.get('/', (req, res) => {
     sess = req.session;
     data = {}
@@ -128,7 +106,6 @@ app.get('/register', function (req, res) {
     res.render('signUp',data)
 })
 
-<<<<<<< HEAD
 app.get('/RecoveryPassword', function (req, res) { 
     sess = req.session;
     var data={}
@@ -136,24 +113,6 @@ app.get('/RecoveryPassword', function (req, res) {
         data.message = sess.message
     }
     res.render('recoverypassword',data)
-=======
-app.post('/signUp', function (req, res) { 
-    let {body} = req
-    sess = req.session;
-    Register(body).then(function(result){
-        console.log(result);
-        res.redirect('/system');
-    }).catch(function(error){
-        if(error.response.status==422){
-            e = error.response.data;
-            console.log(e);
-            sess.message = e.message; 
-        }else{
-            sess.message = 'Cannot register.'; 
-        }
-        res.redirect('/register');
-    });
->>>>>>> origin
 })
 
 app.get('/logOut', function(req, res){
@@ -170,10 +129,6 @@ app.get('/signUp', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
-<<<<<<< HEAD
-=======
-        name: 'Oscar Tavera',
->>>>>>> origin
         errorMessage: 'Page not found.'
     })
 })

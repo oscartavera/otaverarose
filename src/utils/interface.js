@@ -9,7 +9,6 @@ router.get('/system', (req, res) => {
         res.render('CompanyRegister', sess);
     }
     else {
-<<<<<<< HEAD
         sess.message ='User not logged in, please authenticate.';
         res.redirect('/')
     }
@@ -22,9 +21,6 @@ router.get('/system/registerCompany', (req, res) => {
     }
     else {
         sess.message ='User not logged in, please authenticate.';
-=======
-        sess.message ='Debe iniciar sesión primero.';
->>>>>>> origin
         res.redirect('/')
     }
 })
